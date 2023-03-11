@@ -1,8 +1,9 @@
+#!/usr/bin/python3
 def element_at(my_list, idx):
     for li in my_list:
         if idx % 2 == 1:
-            return "None"
+            return None
         elif idx > len(my_list):
-            return "None"
+            return None
         else:
             return my_list[idx]
