@@ -2,6 +2,8 @@
 """
 defining a class of squares
 """
+
+
 class Square:
     """defining stage for class of square"""
     __size = None
