@@ -1,3 +1,8 @@
+#!/usr/bin/python3
+"""define a class for a square and checkmate
+using int and tuple"""
+
+
 class Square:
     """define a class of square with a check
     for int and tuple which will return area of
