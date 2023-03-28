@@ -5,6 +5,7 @@
 class Square:
     """defining conditions for size"""
     __size = None
+
     def __init__(self, size=0):
         """initiallizing conditions for size"""
         if type(size) is int:
