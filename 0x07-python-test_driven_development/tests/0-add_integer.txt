@@ -1,0 +1,38 @@
+========================================================
+importing module 0-add_integer from file
+========================================================
+>>> add_integer = __import__('0-add_integer').add_integer
+
+
+>>> add_integer(2, 3)
+5
+
+testing negative result:
+    >>> add_integer(-10, 5)
+    -5
+
+testing char:
+    >>> add_integer('try', 8)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+testing char:
+    >>> add_integer(9, "8")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+testing negatives:
+    >>> add_integer(-7, -4)
+    -11
+
+testing bigger numbs:
+    >>> add_integer(233333333333,6)
+    233333333339
+
+testing list:
+    >>> add_integer(9, [8,9,7])
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
