@@ -62,3 +62,8 @@ class Rectangle:
             return ((self.height - 1) * i + j)
         else:
             return ("")
+
+    def __repr__(self):
+        """return the eval of the string instance"""
+        exp = "Rectangle({}, {})".format(self.__height, self__width)
+        return exp
