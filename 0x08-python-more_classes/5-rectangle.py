@@ -71,4 +71,3 @@ class Rectangle:
     def __del__(self):
         """if an instance of delete occurs, print a message"""
         print("Bye rectangle...")
-        
