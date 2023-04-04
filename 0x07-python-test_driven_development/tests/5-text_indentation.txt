@@ -1,0 +1,22 @@
+========================================================
+importing module 5-text_indentation from file
+========================================================
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Testing for strings:
+    >>> text_indentation("this is a test: to find out the totality of the function created. I love ALX: what about you?")
+    this is a test:
+    <BLANKLINE>
+    to find out the totality of the function created.
+    <BLANKLINE>
+    I love ALX:
+    <BLANKLINE>
+    what about you?
+    <BLANKLINE>
+
+Testing a non string entry:
+    >>> text_indentation(12345)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
