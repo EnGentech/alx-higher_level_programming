@@ -1,0 +1,36 @@
+========================================================
+importing module 3-say_my_name from file
+========================================================
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Testing values with strings only:
+    >>> say_my_name("EnGentech", "Inyang")
+    My name is EnGentech Inyang
+
+Testing values with string and numbers:
+    >>> say_my_name("Goodluck", 123)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+Testing values with numeric and strings:
+    >>> say_my_name(556, "Peace")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+Testing values with both numeric values:
+    >>> say_my_name(445, 445)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+Testing values with list content:
+    >>> say_my_name(["peace"], "ALX")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+Testing empty values:
+    >>> say_my_name("","")
+    My name is   
