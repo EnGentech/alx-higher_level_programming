@@ -72,6 +72,7 @@ class Rectangle:
         exp = "Rectangle({}, {})". format(self.__width, self.__height)
         return exp
 
+    @classmethod
     def __del__(self):
         """if an instance of delete occurs, print a message"""
         print("Bye rectangle...")
@@ -92,5 +93,5 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """application of class method"""
-        new = Rectangle(size, size)
+        new = cls(size, size)
         return new
