@@ -1,0 +1,31 @@
+========================================================
+importing module 4-print_square from file
+========================================================
+
+>>> print_square = __import__('4-print_square').print_square
+
+Testing for positive input:
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+Testing for negative number:
+    >>> print_square(-3)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+
+Testing for non integer value:
+    >>> print_square("a")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be integer
+
+Testing zero value:
+    >>> print_square(0)
+
+Testing a single value:
+    >>> print_square(1)
+    #
