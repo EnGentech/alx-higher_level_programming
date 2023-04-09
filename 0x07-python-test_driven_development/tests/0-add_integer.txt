@@ -60,3 +60,15 @@ testing for float with integer:
 testing two floating numbers:
     >>> add_integer(3.5, 3.8)
     6
+
+testing for NAN:
+	 >>> add_integer(1, float('nan'))
+	 Traceback (most recent call last):
+	 ...
+	 ValueError: cannot convert float NaN to integer
+
+Testing for overflow:
+	 >>> add_integer(1, float('inf'))
+	 Traceback (most recent call last):
+	 ...
+	 OverflowError: cannot convert float infinity to integer
