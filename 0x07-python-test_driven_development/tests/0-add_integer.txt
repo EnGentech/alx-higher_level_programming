@@ -36,3 +36,27 @@ testing list:
     Traceback (most recent call last):
     ...
     TypeError: b must be an integer
+
+testing empty function:
+    >>> add_integer()
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+testing function with one argument:
+    >>> add_integer(2)
+    100
+
+testing more than two argument:
+    >>> add_integer(2, 5, 6)
+    Traceback (most recent call last):
+    ...
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+testing for float with integer:
+    >>> add_integer(3.8, 2)
+    5
+
+testing two floating numbers:
+    >>> add_integer(3.5, 3.8)
+    6
