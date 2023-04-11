@@ -6,6 +6,10 @@ EnGentech"""
 
 class BaseGeometry:
     """defining a class of BaseGeometry"""
+    
+    def area(self):
+        """defining an area function"""
+        raise Exceptioni("area() is not implemented")
 
     def integer_validator(self, name, value):
         """funtion declaration"""
@@ -16,7 +20,4 @@ class BaseGeometry:
         if value <= 0:
             raise ValueError(name + " must be greater than 0")
 
-    def area(self):
-        """defining an area function"""
-        raise Exception("area() is not implemented")
 # EnGentech sign
