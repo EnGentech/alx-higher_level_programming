@@ -7,6 +7,8 @@ def read_file(filename=""):
     """function to read a file"""
 
     with open(filename, mode='r', encoding="utf-8") as ReadMe:
-        print(ReadMe.read())
+        for content in ReadMe:
+            print(content, end="")
+        ReadMe.closed
 
 # EnGentech
