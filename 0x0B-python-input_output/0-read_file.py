@@ -6,7 +6,7 @@ written by EnGentech"""
 def read_file(filename=""):
     """function to read a file"""
 
-    with open(filename, encoding="utf-8") as ReadMe:
+    with open(filename, mode='r', encoding="utf-8") as ReadMe:
         print(ReadMe.read())
 
 # EnGentech
