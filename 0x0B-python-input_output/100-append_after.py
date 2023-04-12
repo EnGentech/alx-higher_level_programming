@@ -13,5 +13,5 @@ def append_after(filename="", search_string="", new_string=""):
         for i in rd_line:
             rd.write(i)
             if search_string in i:
-                rd.write(new_string + "\n")
+                rd.write(new_string)
 # EnGentech sign
