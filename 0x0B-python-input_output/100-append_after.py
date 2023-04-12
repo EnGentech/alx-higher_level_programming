@@ -7,7 +7,7 @@ def append_after(filename="", search_string="", new_string=""):
     """function to append file base on string"""
 
     with open(filename, mode="r", encoding="utf-8") as rd:
-        rd_line = rd.readline()
+        rd_line = rd.readlines()
 
     with open(filename, mode="w", encoding="utf-8") as rd:
         for i in rd_line:
