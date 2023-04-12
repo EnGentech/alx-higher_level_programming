@@ -7,6 +7,6 @@ def append_write(filename="", text=""):
     """Appending a file content"""
 
     with open(filename, mode="a", encoding="utf-8") as appen:
-        ap = appen.append(text)
+        ap = appen.write(text)
         return ap
 # EnGentech
