@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-import json
-
 """A program to load file content
 using json written by EnGentech"""
+
+import json
 
 
 def from_json_string(my_str):
