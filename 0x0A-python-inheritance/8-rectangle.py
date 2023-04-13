@@ -1,7 +1,22 @@
 #!/usr/bin/python3
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
 """A program to inherit a class of rectangle
 from BaseGeometry written by EnGentech"""
+
+
+class BaseGeometry:
+    """defining geometry same as task 7"""
+
+    def integer_validator(self, name, value):
+        self.name = name
+        self.value = value
+        if type(value) is not int:
+
+            raise TypeError(name + " must be an integer")
+        elif value <= 0:
+            raise ValueError(name + " must be greater than 0")
+
+    def area(self):
+        raise Exception("area() is not implemented")
 
 
 class Rectangle(BaseGeometry):
