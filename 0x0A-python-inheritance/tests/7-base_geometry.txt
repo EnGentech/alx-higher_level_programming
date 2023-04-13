@@ -26,3 +26,8 @@ testing with infinite integer
    >>> bg.integer_validator("infnumber", int('inf'))
    Traceback (most recent call last):
    ValueError: invalid literal for int() with base 10: 'inf'
+
+testing for area
+    >>> area()
+    Traceback (most recent call last):
+    NameError: name 'area' is not defined
