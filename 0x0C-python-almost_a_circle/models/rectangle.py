@@ -80,10 +80,9 @@ class Rectangle(Base):
     def display(self):
         """function to print # depending on input"""
 
+        print("\n"*self.__y, end="")
         for i in range(self.__height):
-            for j in range(self.__width):
-                print("#", end="")
-            print()
+            print(' '*self.__x + "#"*self.__width)
 
     def __str__(self):
         """function to overwrite an instance using __str__"""
