@@ -70,4 +70,10 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         else:
             self.__y = val
+
+    def area(self):
+        """function to find rectangular area"""
+
+        area = self.__height * self.__width
+        return area
 # EnGentech sign
