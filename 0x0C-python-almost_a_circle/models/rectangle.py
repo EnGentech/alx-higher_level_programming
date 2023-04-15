@@ -76,4 +76,12 @@ class Rectangle(Base):
 
         area = self.__height * self.__width
         return area
+
+    def display(self):
+        """function to print # depending on input"""
+
+        for i in range(self.__height):
+            for j in range(self.__width):
+                print("#", end="")
+            print()
 # EnGentech sign
