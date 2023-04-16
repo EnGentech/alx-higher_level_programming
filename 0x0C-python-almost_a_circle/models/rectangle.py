@@ -91,8 +91,8 @@ class Rectangle(Base):
             .format(self.id, self.x, self.y, self.width, self.height)
         return strOut
 
-    def update(self, *args):
-        """function to implement args"""
+    def update(self, *args, **kwargs):
+        """function to implement args dn kwargs"""
 
         if len(args) >= 1:
             self.id = args[0]
@@ -104,4 +104,18 @@ class Rectangle(Base):
             self.x = args[3]
         if len(args) >= 5:
             self.y = args[4]
+        for key, value in kwargs.items():
+            setattr(self, key, value)
+
+    def to_dictionary(self):
+        """function to add to dictionary"""
+
+        x = self.x
+        y = self.y
+        i = self.id
+        h = self.height
+        w = self.width
+        my_dict = {"x": x, "y": y, "id": i, "height": h, "width": w}
+        return my_dict
+
 # EnGentech sign
