@@ -43,4 +43,14 @@ class Square(Rectangle):
         for key, value in kwargs.items():
             setattr(self, key, value)
 
+    def to_dictionary(self):
+        """function to define dictionary"""
+
+        x = self.x
+        y = self.y
+        s = self.size
+        id = self.id
+        my_dict = {"id": id, "x": x, "size": s, "y": y}
+        return my_dict
+
 # EnGentech sign
