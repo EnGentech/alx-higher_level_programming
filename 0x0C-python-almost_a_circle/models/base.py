@@ -47,4 +47,15 @@ class Base:
             return []
         return json.loads(json_string)
 
+    @classmethod
+    def create(cls, **dictionary):
+        """create an instance of a dictionary"""
+
+        if cls.__name__ == "Rectangle":
+            dumi = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dumi = cls(1)
+        dumi.update(**dictionary)
+        return dumi
+
 # EnGentech sign
