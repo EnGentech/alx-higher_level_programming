@@ -55,7 +55,7 @@ class Base:
             dumi = cls(1, 1)
         elif cls.__name__ == "Square":
             dumi = cls(1)
-        dumi.update(**dictionary)
+            dumi.update(**dictionary)
         return dumi
 
     @classmethod
