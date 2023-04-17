@@ -39,4 +39,12 @@ class Base:
         with open(file_out, mode="w", encoding="utf-8") as file_open:
             file_open.write(cls.to_json_string(file_object))
 
+    @staticmethod
+    def from_json_string(json_string):
+        """load file using json"""
+
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
+
 # EnGentech sign
