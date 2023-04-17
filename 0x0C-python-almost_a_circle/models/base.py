@@ -58,4 +58,18 @@ class Base:
         dumi.update(**dictionary)
         return dumi
 
+    @classmethod
+    def load_from_file(cls):
+        """function to return a list of instances"""
+
+        filename = cls.__name__ + ".json"
+        with open(filename, "r") as file_open:
+            content = file_open.read()
+            my_dict = cls.from_json_string(content)
+            lst = []
+            for dictionary in my_dict:
+                n_lst = cls.create(**dictionary)
+                lst.append(n_lst)
+            return lst
+
 # EnGentech sign
