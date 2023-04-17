@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 
+"""A test case to check the validation of
+codes written for this purpose through
+EnGentech"""
+
 import io
 import sys
 import unittest
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
-
-"""A test case to check the validateion of
-codes written for this purpose through
-EnGentech"""
 
 
 class TestBase(unittest.TestCase):
