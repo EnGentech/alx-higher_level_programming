@@ -1,3 +1,3 @@
 -- print first_table from htbn_0c
 
-SHOW CREATE TABLE first_table;
+SHOW COLUMNS FROM first_table;
