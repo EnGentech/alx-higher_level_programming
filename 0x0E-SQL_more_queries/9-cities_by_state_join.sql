@@ -1,5 +1,6 @@
 -- selection from two tables with foreign key
 
-SELECT id, name FROM cities
-WHERE state_id = (SELECT name FROM states)
-ORDER BY id ASC;
+SELECT cities.id, cities.name, states.name
+FROM cities INNER JOIN states
+ON states.id = cities.state_id
+ORDER BY cities.id;
