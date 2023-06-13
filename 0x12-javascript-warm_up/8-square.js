@@ -4,6 +4,6 @@ if (isNaN(process.argv[2])) {
 } else {
   const input = parseInt(process.argv[2]);
   for (let i = 0; i < input; i++) {
-    console.log('x'.repeat(input));
+    console.log('X'.repeat(input));
   }
 }
