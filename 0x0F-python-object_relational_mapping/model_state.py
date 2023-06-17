@@ -1,14 +1,8 @@
 #!/usr/bin/python3
 """This page begins the use of sqlalchemy"""
 
-from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String
-"""this file begins the usage of sqlalchemy"""
-
-url = "mysql+mysqldb://root:admin8634@localhost/hbtn_0e_6_usa"
-engine = create_engine(url)
-connection = engine.connect()
 
 Base = declarative_base()
 
