@@ -1,0 +1,26 @@
+#!/usr/bin/python3
+"""This program will list all states in the db"""
+
+import MySQLdb
+import sys
+
+if __name__ == '__main__':
+    name = sys.argv[1]
+    pas = sys.argv[2]
+    dbname = sys.argv[3]
+
+    mydb = MySQLdb.connect(host="localhost", port=3306,
+                           user=name, passwd=pas, db=dbname)
+    mycursor = mydb.cursor()
+
+    command = "SELECT * FROM states WHERE name LIKE 'N%'\
+    ORDER BY states.id ASC;"
+    mycursor.execute(command)
+
+    for state in mycursor:
+        print(state)
+
+    mycursor.close()
+    mydb.close()
+
+# Coded by EnGentech
