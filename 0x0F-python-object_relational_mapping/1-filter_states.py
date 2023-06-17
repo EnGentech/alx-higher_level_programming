@@ -13,7 +13,7 @@ if __name__ == '__main__':
                            user=name, passwd=pas, db=dbname)
     mycursor = mydb.cursor()
 
-    command = "SELECT * FROM states WHERE name LIKE 'N%'\
+    command = "SELECT * FROM states WHERE BINARY name LIKE 'N%'\
     ORDER BY states.id ASC;"
     mycursor.execute(command)
 
