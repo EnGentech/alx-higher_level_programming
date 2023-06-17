@@ -14,9 +14,9 @@ if __name__ == '__main__':
                            user=name, passwd=pas, db=dbname)
     mycursor = mydb.cursor()
 
-    command = "SELECT * FROM states WHERE name = %s\
-    ORDER BY states.id ASC;"
-    mycursor.execute(command, (choice, ))
+    command = "SELECT * FROM states WHERE name LIKE BINARY = '{}'\
+    ORDER BY states.id ASC;".format(choice)
+    mycursor.execute(command)
 
     for state in mycursor:
         print(state)
