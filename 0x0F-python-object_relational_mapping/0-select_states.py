@@ -9,7 +9,8 @@ if __name__ == '__main__':
     pas = sys.argv[2]
     dbname = sys.argv[3]
 
-    mydb = MySQLdb.connect(host="localhost", port=3306, user=name, passwd=pas, db=dbname)
+    mydb = MySQLdb.connect(host="localhost", port=3306,
+                           user=name, passwd=pas, db=dbname)
     mycursor = mydb.cursor()
 
     command = "SELECT * FROM states ORDER BY states.id ASC;"
@@ -21,4 +22,4 @@ if __name__ == '__main__':
     mycursor.close()
     mydb.close()
 
-#Coded by EnGentech
+# Coded by EnGentech
