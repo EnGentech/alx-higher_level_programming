@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
     new_City = City(name="San Francisco")
     new = State(name="California")
-    new.relate.append(new_City)
+    new.cities.append(new_City)
 
     session.add(new)
     session.add(new_City)
