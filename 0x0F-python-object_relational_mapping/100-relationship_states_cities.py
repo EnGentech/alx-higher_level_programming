@@ -27,6 +27,8 @@ if __name__ == "__main__":
     new_City = City(name="San Francisco")
     new = State(name="California", relate=new_City)
 
+    session.add(new_City)
+    session.add(new)
     session.commit()
 
 # Coded be EnGentech
