@@ -9,14 +9,13 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from model_city import City
 
-uname = sys.argv[1]
-pas = sys.argv[2]
-db = sys.argv[3]
-
-url = "mysql+mysqldb://{}:{}@localhost:3306/{}"\
-    .format(uname, pas, db)
-
 if __name__ == "__main__":
+    uname = sys.argv[1]
+    pas = sys.argv[2]
+    db = sys.argv[3]
+
+    url = "mysql+mysqldb://{}:{}@localhost:3306/{}" \
+        .format(uname, pas, db)
 
     engine = create_engine(url)
     engine.connect()
@@ -32,4 +31,4 @@ if __name__ == "__main__":
     for x, y in all_table:
         print("{}: ({}) {}".format(x.name, y.id, y.name))
 
-# Coded by EnGentech
+# Coded be EnGentech
