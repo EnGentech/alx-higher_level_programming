@@ -22,15 +22,10 @@ if __name__ == "__main__":
     session = sessionmaker()
     local_session = session(bind=engine)
 
-    count = local_session.query(State).count()
+    all_state = local_session.query(State)\
+        .filter(State.name.like("%a%")).order_by(State.id).all()
 
-    if count == 0:
-        print("Nothing")
-    else:
-        all_state = local_session.query(State)\
-            .filter(State.name.like("%a%")).order_by(State.id).all()
-
-        for states in all_state:
-            print("{}: {}".format(states.id, states.name))
+    for states in all_state:
+        print("{}: {}".format(states.id, states.name))
 
 # Coded by EnGentech
