@@ -29,7 +29,7 @@ if __name__ == "__main__":
     new.cities.append(new_City)
 
     session.add(new)
-    session.add(new_City)
+
     session.commit()
 
 # Coded be EnGentech
