@@ -27,6 +27,6 @@ if __name__ == "__main__":
 
     for i in del_all_a_states:
         local_session.delete(i)
-        local_session.commit()
+    local_session.commit()
 
 # Coded by EnGentech
