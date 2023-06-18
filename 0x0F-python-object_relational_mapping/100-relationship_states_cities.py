@@ -25,10 +25,11 @@ if __name__ == "__main__":
     session = sessionmaker()(bind=engine)
 
     new_City = City(name="San Francisco")
-    new = State(name="California", relate=new_City)
+    new = State(name="California")
+    new.relate.append(new_City)
 
-    session.add(new_City)
     session.add(new)
+    session.add(new_City)
     session.commit()
 
 # Coded be EnGentech
