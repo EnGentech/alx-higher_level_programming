@@ -8,6 +8,7 @@ from sqlalchemy.orm import declarative_base
 
 Base = declarative_base()
 
+
 class City(Base):
     """Class definition of City"""
     __tablename__ = "cities"
