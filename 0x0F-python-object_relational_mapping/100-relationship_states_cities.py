@@ -8,6 +8,7 @@ from relationship_state import Base, State
 from sqlalchemy.orm import session
 from sqlalchemy import create_engine
 from relationship_city import City
+from sqlalchemy.schema import Table
 
 if __name__ == "__main__":
     uname = sys.argv[1]
