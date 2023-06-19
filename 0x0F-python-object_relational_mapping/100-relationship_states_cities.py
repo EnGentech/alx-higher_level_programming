@@ -5,7 +5,7 @@ using the available resources on sqlalchemy"""
 
 import sys
 from relationship_state import Base, State
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import session
 from sqlalchemy import create_engine
 from relationship_city import City
 
@@ -22,14 +22,15 @@ if __name__ == "__main__":
 
     Base.metadata.create_all(engine)
 
-    session = sessionmaker()(bind=engine)
+    session = Session(engine)
+    new_city = City(name='San Francisco')
+    new = State(name='California')
+    new.cities.append(new_city)
 
-    new_City = City(name="San Francisco")
-    new = State(name="California")
-    new.cities.append(new_City)
-
-    session.add(new)
-
+    session.add_all([new, new_city])
     session.commit()
+
+    session.close()
+    session.add(new)
 
 # Coded be EnGentech
