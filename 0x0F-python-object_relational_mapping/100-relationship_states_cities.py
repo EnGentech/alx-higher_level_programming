@@ -5,7 +5,7 @@ using the available resources on sqlalchemy"""
 
 import sys
 from relationship_state import Base, State
-from sqlalchemy.orm import session
+from sqlalchemy.orm import Session
 from sqlalchemy import create_engine
 from relationship_city import City
 from sqlalchemy.schema import Table
@@ -32,6 +32,5 @@ if __name__ == "__main__":
     session.commit()
 
     session.close()
-    session.add(new)
 
 # Coded be EnGentech

@@ -3,6 +3,7 @@
 
 from sqlalchemy.ext.declarative import declarative_base, relationship
 from sqlalchemy import Column, Integer, String
+from relationship_city import City
 
 Base = declarative_base()
 
