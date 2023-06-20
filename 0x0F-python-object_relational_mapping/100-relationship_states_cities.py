@@ -22,12 +22,12 @@ if __name__ == "__main__":
 
     Base.metadata.create_all(engine)
 
-    session = Session(bind=engine)
-    california = State(name="California", cities=City(name='San Francisco'))
-    
-    session.add(california)
+    session = Session(engine)
+    new_city = City(name='San Francisco')
+    new = State(name='California')
+    new.cities.append(new_city)
+    session.add_all([new, new_city])
     session.commit()
-
     session.close()
 
 # Coded be EnGentech
