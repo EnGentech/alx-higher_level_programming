@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """This page begins the use of sqlalchemy"""
 
-from sqlalchemy.ext.declarative import declarative_base, relationship
+from sqlalchemy.orm import declarative_base, relationship
 from sqlalchemy import Column, Integer, String
 from relationship_city import City
 
