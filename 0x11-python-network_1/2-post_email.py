@@ -11,7 +11,7 @@ if __name__ == "__main__":
     url = sys.argv[1]
     email_address = sys.argv[2]
     data = {'email': email_address}
-    data = parse.urlencode(data).encode('utf-8')
+    data = parse.urlencode(data=data).encode('utf-8')
     reqst = request.Request(url, data)
 
     with request.urlopen(reqst) as file:
