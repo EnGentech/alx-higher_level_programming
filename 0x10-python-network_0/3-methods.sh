@@ -1,3 +1,3 @@
 #!/bin/bash
 # Display the content of the web
-curl -sI <URL> | awk '/^Allow:/ {print substr($0, 8)}'
+curl -sI "$1" | awk '/^Allow:/ {print substr($0, 8)}'
