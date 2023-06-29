@@ -14,6 +14,6 @@ if __name__ == "__main__":
             content = response.read().decode("utf-8")
             print(content)
     except error.HTTPError as err:
-        print("Error code: {}".format(err.status))
+        print("Error code: {}".format(err.code))
 
 # Coded by EnGentech
