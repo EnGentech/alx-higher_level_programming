@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""
-This code uses a try except error catch
-to avoid a program crash when an error arises
+"""This code uses a try except url_error catch
+to avoid a program crash when an url_error arises
 from HTTP.
 """
 import urllib.request
