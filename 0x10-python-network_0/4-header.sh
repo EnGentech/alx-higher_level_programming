@@ -1,3 +1,3 @@
 #!/bin/bash
 # Display the content of the web
-curl -sH "X-School-User-Id : 98" "$1"
+curl -sX GET -H "X-School-User-Id:98" "$1"
