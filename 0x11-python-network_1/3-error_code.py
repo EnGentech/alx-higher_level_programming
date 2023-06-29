@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """
-This code uses a try except error catch
-to avoid a program crash when an error arises
+This code uses a try except .error catch
+to avoid a program crash when an .error arises
 from HTTP.
 """
-from urllib import request, error
+from urllib import request
+import urllib.error as er
 from sys import argv
 
 if __name__ == "__main__":
@@ -13,7 +14,7 @@ if __name__ == "__main__":
         with request.urlopen(url) as response:
             content = response.read().decode("utf-8")
             print(content)
-    except error.HTTPError as err:
+    except er.HTTPError as err:
         print("Error code: {}".format(err.code))
 
 # Coded by EnGentech
