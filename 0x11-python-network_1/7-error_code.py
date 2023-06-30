@@ -4,9 +4,11 @@ print conditionally on http status code
 """
 
 import requests
+from sys import argv
 
 if __name__ == "__main__":
-    reply = requests.get('http://engentech.tech/com')
+    url = argv[1]
+    reply = requests.get(url)
     code = reply.status_code
 
     if code >= 400:
