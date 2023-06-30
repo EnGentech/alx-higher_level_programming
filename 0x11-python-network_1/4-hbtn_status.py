@@ -12,6 +12,5 @@ if __name__ == "__main__":
     txt = content.text
 
     print("Body response:\n\t- type: {}\n\t- content: {}".format(clas, txt))
-    print(content.status_code)
 
 # Coded by EnGentech
