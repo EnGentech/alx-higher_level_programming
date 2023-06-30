@@ -14,6 +14,6 @@ if __name__ == '__main__':
             content = response.read()
             print(content)
     except error.HTTPError as ero:
-        print("Error code: {}".format(ero.code))
-        
+        print("Error code: {}".format(ero.status))
+
 # Coded by EnGentech
