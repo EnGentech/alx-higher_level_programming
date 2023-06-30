@@ -1,17 +1,14 @@
 #!/usr/bin/python3
 """
-The requests module to get HTTP
-content over the internet with the
-printed pattern as
-Body response:$
-    - type: <class 'str'>$
-    - content: OK$
+The use of requests.get to obtain info
+from the internet
 """
 import requests
-if __name__ == "__main__":
-    url = "https://alx-intranet.hbtn.io/status"
-    a = requests.get(url)
 
-    new = a.content.decode('utf-8')
-    print("Body response:\n\t- type: {}\n\t- content:\
-    {}".format(new.__class__, new))
+url = 'https://alx-intranet.hbtn.io/status'
+content = requests.get(url)
+clas = content.text.__class__
+txt = content.text
+
+print("Body response:\n\t- type: {}\n\t- content: {}".format(clas, txt))
+# Coded by EnGentech
