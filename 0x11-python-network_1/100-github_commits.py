@@ -15,9 +15,10 @@ if __name__ == '__main__':
 
     content = requests.get(url, headers=header).json()
 
-    count = 1
+    count = 0
     for x in content:
-        print('{}: {}'.format(x['sha'], x['author name']))
+        #print(x)
+        print('{}: {}'.format(x['sha'], x['commit']['author']['name']))
         count += 1
         if count == 10:
             break
