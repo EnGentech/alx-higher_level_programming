@@ -22,6 +22,6 @@ if __name__ == "__main__":
         else:
             print("[{}] {}".format(obtain['id'], obtain['name']))
     except ValueError:
-        print('No result')
+        print('Not a valid JSON')
 
 # Coded by EnGentech
