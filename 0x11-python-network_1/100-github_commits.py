@@ -17,7 +17,6 @@ if __name__ == '__main__':
 
     count = 0
     for x in content:
-        #print(x)
         print('{}: {}'.format(x['sha'], x['commit']['author']['name']))
         count += 1
         if count == 10:
