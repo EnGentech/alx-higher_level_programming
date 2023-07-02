@@ -16,6 +16,8 @@ if __name__ == '__main__':
     content = requests.get(url, headers=header).json()
 
     for x in content[:10]:
-        print('{}: {}'.format(x.get('sha'), x.get('commit').get('author').get('name')))
+        sha = x.get('sha')
+        name = x.get('commit').get('author').get('name')
+        print('{}: {}'.format(sha, name))
 
 # Coded by EnGentech
