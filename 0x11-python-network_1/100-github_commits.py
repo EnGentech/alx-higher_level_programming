@@ -15,11 +15,7 @@ if __name__ == '__main__':
 
     content = requests.get(url, headers=header).json()
 
-    count = 0
-    for x in content:
+    for x in content[:10]:
         print('{}: {}'.format(x['sha'], x['commit']['author']['name']))
-        count += 1
-        if count == 10:
-            break
 
 # Coded by EnGentech
