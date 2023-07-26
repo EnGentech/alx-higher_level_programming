@@ -1,16 +1,28 @@
 #!/usr/bin/node
-const request = require('request');
-request(process.argv[2], function (error, response, body) {
-  if (!error) {
-    const todos = JSON.parse(body);
-    let completed = {};
-    todos.forEach((todo) => {
-      if (todo.completed && completed[todo.userId] === undefined) {
-        completed[todo.userId] = 1;
-      } else if (todo.completed) {
-        completed[todo.userId] += 1;
+
+const connect = require('request');
+
+const url = 'https://jsonplaceholder.typicode.com/todos';
+
+let content = connect(url, function (err, response, body) {
+  content = JSON.parse(body);
+
+  if (!err) {
+    let loop;
+    let count;
+    let use = 0;
+    const dict = {};
+
+    for (use = 1; use <= 10; use++) {
+      count = 0;
+      for (loop in content) {
+        if (content[loop].completed === true && content[loop].userId === use) {
+          count += 1;
+        }
       }
-    });
-    console.log(completed);
+      dict[use] = count;
+    }
+    console.log(dict);
   }
 });
+
