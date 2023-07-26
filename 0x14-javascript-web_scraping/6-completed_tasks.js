@@ -2,7 +2,7 @@
 
 const connect = require('request');
 
-const url = 'https://jsonplaceholder.typicode.com/todos';
+const url = process.argv[2];
 
 let content = connect(url, function (err, response, body) {
   content = JSON.parse(body);
@@ -25,4 +25,3 @@ let content = connect(url, function (err, response, body) {
     console.log(dict);
   }
 });
-
